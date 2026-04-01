@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Main{
+    public static void main(String[]args){
+        Scanner scn=new Scanner(System.in);
+        int min=scn.nextInt();
+        int max=scn.nextInt();
+        for(int i=min;i<=max;i++){
+            if(isPal(i)){
+                System.out.print(i+" ");
+            }
+        }
+        
+        
+    }
+    static boolean isPal(int n){
+        int rev=0;
+        int dupli=n;
+        while(n>0){
+            int ld=n%10;
+            rev=rev*10+ld;
+            n=n/10;
+        }
+        if(dupli==rev){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
