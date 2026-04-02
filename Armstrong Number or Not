@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Main{
+    public static void main(String[]args){
+        Scanner scn=new Scanner(System.in);
+        int n=scn.nextInt();
+        
+        int digits=0;
+        int dupli=n;
+        while(dupli>0){
+            dupli=dupli/10;
+            digits++;
+        }
+        int temp=n;
+        int sum=0;
+        while(temp>0){
+            int ld=temp%10;
+            sum+=Math.pow(ld,digits);
+            temp/=10;
+        }
+        if(sum==n){
+            System.out.print(n+" is Armstrong Number");
+        }
+        else{
+            System.out.print(n+" is not Armstrong Number");
+        }
+    }
+}
