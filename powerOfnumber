@@ -1,0 +1,13 @@
+    import java.util.*;
+    
+    class Main{
+        public static void main(String[]args){
+            Scanner scn=new Scanner(System.in);
+            System.out.println("Enter Number: ");
+            int n=scn.nextInt();
+            System.out.println("Enter power:");
+            int k=scn.nextInt();
+            int pw=(int)Math.pow(n,k);
+            System.out.println(pw);
+        }   
+    }
